@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="/css/bootstrap.css" >
-<link rel="stylesheet" href="/css/bootstrap-theme.css" >
-<link rel="stylesheet" href="/css/style.css" >
-<script src="/js/jquery.js" ></script>
-<script src="/js/bootstrap.js" ></script>
-<script src="/js/js.js" ></script>
-	<title></title>
-</head>
-<body>
-
-</body>
-</html>
+<?php 
+include_once('function.php');
+get_header();
+if (checklogin()) {
+	include_once('template/udah-masuk.php');
+} else {
+	include_once('template/user-login.php');
+}
+get_footer(); ?>
