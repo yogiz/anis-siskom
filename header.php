@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="css/bootstrap.css" >
 <link rel="stylesheet" href="css/bootstrap-theme.css" >
 <link rel="stylesheet" href="css/style.css" >
@@ -20,12 +20,14 @@
 	  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
-		    <div class="item active">
-		      <img src="http://placehold.it/1200x400/F34336/F34336&text=WORDPRESS THEME DEVELOPER">
-		    </div>
-		    <div class="item">
-		      <img src="http://placehold.it/1200x400/20BFA9/ffffff&text=CLEAN %26 SMART">
-		    </div>
+		  <?php 
+		  	for ($i=1; $i <= 6 ; $i++) { 
+		  		$active = ($i == 1 )?'active' : '';
+			    echo '<div class="item '.$active.'">';
+			    echo '<img src="img/slide-'.$i.'.jpg">';
+			    echo '</div>';	
+		  	}
+		   ?>
 		  </div>
 
 		  <!-- Controls -->
@@ -49,7 +51,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img class="img-responsive" src="https://yusiainulyakin2013ulfanovilia.files.wordpress.com/2015/02/download-21.jpg?w=660&h=635"></a>
+          <a class="navbar-brand" href="#"><img class="img-responsive" src="img/logo.png"></a>
           <span class="site-name"><b>Sistem</b> Komputer</span>
           <span class="site-description">Hotspot login basecamp SK Asia</span>
         </div>
@@ -68,3 +70,5 @@
 </header>
 </div>
 </div>
+
+<div id="page" class="">

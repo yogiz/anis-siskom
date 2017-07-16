@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once('function.php');
 get_header();
 if (checklogin()) {
